@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.14)  14 SEP 2018 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.14)  19 SEP 2018 22:20
 entering extended mode
 **./informe.tex
 (informe.tex
@@ -243,7 +243,22 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 ("C:\Users\Lucky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
 x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
+
+("C:\Users\Lucky\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen122
+\scratchbox=\box28
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen123
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks22
+)))
 ("C:\Users\Lucky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -307,8 +322,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\Gin@req@height=\dimen122
-\Gin@req@width=\dimen123
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
 )
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 15.
 
@@ -338,37 +353,77 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 15.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 17.
 
-[1
+Overfull \hbox (19.84175pt too wide) in paragraph at lines 15--15
+ [][] 
+ []
+
+(informe.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [1
 
 {C:/Users/Lucky/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(informe.aux
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...n}{\numberline {1}Introducci\IeC {\'o}n}{1}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...n}{\numberline {1}Introducci\IeC {\'o}n}{1}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 4.
+)
+\tf@toc=\write3
+\openout3 = `informe.toc'.
+
+ [2
+
+] [3
+
+] (informe.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 3556 strings out of 492973
- 51683 string characters out of 3126692
- 123235 words of memory out of 3000000
- 7360 multiletter control sequences out of 15000+200000
- 38210 words of font info for 38 fonts, out of 3000000 for 9000
+ 3864 strings out of 492973
+ 55831 string characters out of 3126692
+ 127176 words of memory out of 3000000
+ 7661 multiletter control sequences out of 15000+200000
+ 47208 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,31p,297b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,6n,31p,297b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.e
-nc}<C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr1
-0.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-mr12.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
-m/lmr17.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmr7.pfb>
-Output written on informe.pdf (1 page, 87170 bytes).
+nc}<C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+10.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmbx12.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/lm/lmr10.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmr12.pfb><C:/Users/Lucky/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmr17.pfb>
+Output written on informe.pdf (3 pages, 132898 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
