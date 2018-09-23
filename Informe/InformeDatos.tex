@@ -84,16 +84,13 @@
 	\item Staticpage: El usuario visita una página.
 	\item Conversion: El usuario realiza una conversión, comprando un producto.
 	\item Lead: El usuario se registra para recibir una notificación de disponibilidad de stock, para un producto que no se encontraba disponible en ese momento.
-	
 	\newpage
 	La cantidad total de eventos es: 	1011288. Los cuales están distribuidos de la siguiente manera. 
 	\end{itemize}
-	
 	\begin{center}
 	\includegraphics[width=10cm]{ocurrencia_eventos.jpg}\\
 	\textbf{Figura 1:}  \textit{Cantidad de apariciones de cada evento. }
 	\end{center}
-	
 	Nos dimos cuenta que no todos los campos del data participan en todos los eventos. Cada evento utiliza una determinada cantidad de columnas del data set. Por lo tanto, mediante un análisis de elementos nulos llegamos a las siguiente conclusiones:
 	\begin{itemize}
 		\item Todos los eventos tienen información temporal y sobre la persona que realizó dicho evento. 
@@ -109,15 +106,12 @@
 		\item Para le evento \textbf{conversion} sus campos obligatorios son:  sku, model, color , condition y storage
 		\item Para el evento \textbf{lead} su campo obligatorio es: model
 	\end{itemize}	
-	
 	Como todos los eventos tienen información temporal. Decidimos análizar la cantidad de eventos que se realizan por hora del día y el resultado fue:
-	
 	\begin{center}
 	\includegraphics[width=10cm]{cantidadDeEventosPorHoraDelDia.jpg}\\
 	\textbf{Figura 2:}  \textit{Distribución de los eventos a lo largo del día.}
 	\end{center}
 	Por lo tanto, la mayoría de los eventos se efectúan entre las 14 am y 2 am. \\
-		
 	\subsection{Viewed product}
 	\subsubsection{Análisis individual de las características}
 	La primera columna que decicimos analizar de éste evento es model. De ella obtuvimos los 15 celulares más vistos, ellos son:
@@ -152,7 +146,6 @@
         	\item El 0,02\%  de las visitas es hacia  productos nuevos.    
 	\end{itemize}
 	Por otra parte, realizamos un análisis temporal sobre el evento y obtuvimos que:
-	
 	\subsubsection{Análisis temporal}
 	\begin{center}
 	\includegraphics[width=10cm]{VisitasAProductosSegunDiaAnio.jpg}\\
@@ -205,20 +198,88 @@ agregar explicación de porqué sólo se analizaron iphones en color.
 	\item El 34\% de los accesos es a la página principal.
 	\item El 0,26\% de los accesos es a ventas. 
 	\end{itemize}
-
-
+	El acceso según ventas puede clasificarse según la marca. Obtuvimos lo siguiente: 
+	\begin{center}
+	\includegraphics[width=10cm] {porcentajeDeAccesosParaVentaSegunMarca.jpg}\\
+	\textbf{Figura 10:}  \textit{Porcentaje de accesos para venta según la marca.}
+	\end{center}
+	Este acceso tambien puede clasificarse según el modelo. Obtuvimos lo siguiente:
+	\begin{center}
+	\includegraphics[width=10cm] {porcentajeDeAccesosSegunModelo.jpg}\\
+	\textbf{Figura 11:}  \textit{Porcentaje de accesos para venta según el modelo.}
+	\end{center}
+	El acceso según compras puede clasificarse según la marca. Obtuvimos lo siguiente:
+	\begin{center}
+	\includegraphics[width=10cm] {porcentajeDeAccesosPorMarcaSegunCompras.jpg}\\
+	\textbf{Figura 12:}  \textit{Porcentaje de accesos para compra según la marca}
+	\end{center}
+	El acceso de compras por oferta es poco significativo. Por eso no lo excluyo del gráfico. 
+	Hacer un análisis de las compras según modelo es muy complicado y no creemos que valga la pena. Esto se debe a que un mismo modelo puede tener urls distitntos. 
 	\subsubsection{Análisis temporal}
 	Luego, analizamos el top 5 de las campañas publicitarias más clickeadas, es decir, más visitadas según el mes. Obtuvimos lo siguiente: 
 	\begin{center}
 	\includegraphics[width=10cm] {top5campaniasPublicitariasMasImportantesSegunMes.jpg}\\
-	\textbf{Figura 10:}  \textit{Cantidad de clicks según campaña por mes.}
+	\textbf{Figura 13:}  \textit{Cantidad de clicks según campaña por mes.}
 	\end{center}
 	Analizamos así tambien el top5 de publicidades según la cantidad de clicks según el día del año. Obtuvimos lo siguiente:
-
 	\begin{center}
 	\includegraphics[width=10cm] {cantidadDeClicksSegunDiaDelAnio.jpg}\\
-	\textbf{Figura 11:}  \textit{En este gráfico se muestra el top5 de las campañas publicitarias según día del año.  }
+	\textbf{Figura 14:}  \textit{Cantidad de clicks según campaña por día del año.  }
 	\end{center}
+	\subsection{Checkout}
+	\subsubsection{Análisis individual de las caracterísiticas}
+	Empezamos analizando los 10 modelos que más llegaron al checkout. Ellos fueron:
+	\begin{itemize}
+	\item iPhone 6 con el 10\% de los checkouts.
+	\item iPhone 5s con el 8\% de los checkouts.
+	\item iPhone 6S  con el 7\% de los checkouts.
+	\item Samsung Galaxy J5 con el 6\% de los checkouts.
+	\item Samsung Galaxy S7 con el 4\% de los checkouts.
+	\item iPhone 7 con el 4\% de los checkouts.
+	\item Samsung Galaxy S8 con el 3\% de los checkouts.
+	\item iPhone 7 Plus con el 3\% de los checkouts.
+	\item Samsung Galaxy J7 Prime con el 3\% de los checkouts.
+	\item Samsung Galaxy S6 Flatcon el 3\% de los checkouts.
+	\end{itemize}
+	Analizamos la cantidad de checkouts según el almacenamiento. Lo obtenido fue:
+	\begin{itemize}
+	\item El 37\% de los checkouts fue de dispositivos de 16GB
+	\item El 29\% de los checkouts fue de dispositivos de 32GB
+	\item	El 16\% de los checkouts fue de dispositivos de 64GB
+	\item	El 11\% de los checkouts fue de dispositivos de 8GB
+	\item	El 5\% de los checkouts fue de dispositivos de 128GB
+	\item	El 1\% de los checkouts fue de dispositivos de 4GB
+	\item	El 1\% de los checkouts fue de dispositivos de 256GB
+	\item	El 0,1\% de los checkouts fue de dispositivos de 512MB
+	\end{itemize}
+	Analizamos la cantidad de checkouts según el color. Lo obtenido fue:
+	\begin{center}
+	\includegraphics[width=10cm] {porcentajeDeColoresQueLlegaronACheck.jpg}\\
+	\textbf{Figura 15:}  \textit{Porcentaje de colores que llegaron al checkout.}
+	\end{center}
+	Por último analizamos la calidad de los productos que llegaron al checkout. Lo obtenido fue:
+	\begin{itemize}
+	\item El 45 \% de los productos son de calidad buena. 
+	\item El 27\% de los productos son de calidad excelente.
+	\item El 24\% de los productos son de calidad muy buena. 
+	\item El 3\% de los productos son de calidad buena con touch id. 
+	\item No es representativo la cantidad de productos nuevos. 
+	\end{itemize}
+	\subsubsection{Análisis temporal}
+	Analizamos la cantidad de checkouts según los días del año. Obtuvimos lo siguiente:
+	\begin{center}
+	\includegraphics[width=10cm] {cantidadDeCheckoutsSegunDiaDelAnio.jpg}\\
+	\textbf{Figura 15:}  \textit{Cantidad de checkouts según día del año.}
+	\end{center}
+	
+	\subsubsection{Análisis cruzado}
+	
+	
+	
+	
+	
+	
+	
 
 	
 	
