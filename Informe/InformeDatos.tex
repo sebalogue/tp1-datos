@@ -61,12 +61,12 @@
 	\tableofcontents
 	\newpage
 	
-	\section{Introducción:}
+	\section{Introducción}
 	Este trabajo práctico consite en realizar un análisis sobre un conjunto de eventos de web analytics de usuarios que visitaron www.trocafone.com, su plataforma de ecommerce de Brasil.
 	
-	Para realizar dicho trabajo utilizaremos el lenguaje de programación \textit{Python}. Para el análisis de datos usaremos la librería \textit{Pandas} y para la realización de gráficos utilizaremos las librerías \textit{Matplotlib }y \textit{Sns}. Por otro lado, trabajaremos usando el sistema de control de versiones \textit{GIT}	
+	Para realizar dicho trabajo utilizaremos el lenguaje de programación \textit{Python}. Para el análisis de datos usaremos la librería \textit{Pandas} y para la realización de gráficos utilizaremos las librerías \textit{Matplotlib }y \textit{Seaborn}. Por otro lado, trabajaremos usando el sistema de control de versiones \textit{GIT}	
 	
-	En nuestra primera experiencia decimos usar la siguiente abstracción para realizar el trabajo práctico: \textbf{preguntar al dataset}. Es decir, que en nuestro modelo siempre hacemos preguntas que luego intentaremos responder con los datos que obtendremos del dataset. 
+	En nuestra primera experiencia decimos usar la siguiente abstracción para realizar el trabajo práctico: \textbf{preguntar al dataset}, es decir, que en nuestro modelo siempre hacemos preguntas que luego intentaremos responder con los datos que obtendremos del dataset. 
 	
 	\section{Análisis Preliminar}
 	En un primer análisis intentaremos entender cómo esta compuesto el data set. Es decir, cuáles son los eventos que los componenen, cómo interactúan como un conjunto y cuáles son las características propias de cada evento. 
@@ -86,17 +86,17 @@
 	\item Lead: El usuario se registra para recibir una notificación de disponibilidad de stock, para un producto que no se encontraba disponible en ese momento.
 	
 	\newpage
-	La cantidad total de eventos es: 	1011288. Ellos se distribuyeron de la siguiente manera:
+	La cantidad total de eventos es: 	1011288. Los cuales están distribuidos de la siguiente manera. 
 	\end{itemize}
 	
 	\begin{center}
 	\includegraphics[width=10cm]{ocurrencia_eventos.jpg}\\
-	\textbf{Figura 1:}  \textit{En este gráfico se puede ver los eventos y la cantidad de apariciones que tuvieron en el dataset. }
+	\textbf{Figura 1:}  \textit{Cantidad de apariciones de cada evento. }
 	\end{center}
 	
-	Nos dimos cuenta que no todos los campos del data set eran relevantes para todos los eventos, por lo tanto, mediante un análisis de elementos nulos llegamos a las siguientes conclusiones: 
+	Nos dimos cuenta que no todos los campos del data participan en todos los eventos. Cada evento utiliza una determinada cantidad de columnas del data set. Por lo tanto, mediante un análisis de elementos nulos llegamos a las siguiente conclusiones:
 	\begin{itemize}
-		\item Todos los eventos tiene información temporal y sobre la persona que realizó dicho evento. 
+		\item Todos los eventos tienen información temporal y sobre la persona que realizó dicho evento. 
 		\item Para el evento \textbf{viewed product} sus campos obligatorios son: timestamp , sku , model, condition, storage, color.
 		\item Para el evento \textbf{brand listing} su campo obligatorio es: skus. 
 		\item Para el evento \textbf{visited site} sus campos obligatorios son: channel, new vs returning, city, region, country, device tipe , screen resolution, operating system version y browser version.
@@ -114,61 +114,67 @@
 	
 	\begin{center}
 	\includegraphics[width=10cm]{cantidadDeEventosPorHoraDelDia.jpg}\\
-	\textbf{Figura 2:}  \textit{En este gráfico se puede ver los eventos y su distribución a lo largo del día. }
+	\textbf{Figura 2:}  \textit{Distribución de los eventos a lo largo del día.}
 	\end{center}
-	Por lo tanto, la mayoría de los eventos se efectúan entre las 10 am y 2 am. \\
-	
-	\textbf{Nos dimos cuenta al analizar el dataset que teníamos información completa del año 2016 entre enero y la primera quincena de junio. }
-	
-	
+	Por lo tanto, la mayoría de los eventos se efectúan entre las 14 am y 2 am. \\
+		
 	\subsection{Viewed product}
+	\subsubsection{Análisis individual de las características}
 	La primera columna que decicimos analizar de éste evento es model. De ella obtuvimos los 15 celulares más vistos, ellos son:
 	\begin{center}
 	\includegraphics[width=10cm]{15celularesMasVisitados.jpg}\\
-	\textbf{Figura 3:}  \textit{En este gráfico se pueden ver los 15 celulares más vistos.  }
+	\textbf{Figura 3:}  \textit{Cantidad de visitas por celular.}
 	\end{center}
-	 Sobre las características de esos modelos primero analizamos el color de los productos vistos y concluímos que: 
-	 El 50\% de de los usuarios concentró su elección en los siguientes colores:
-	 \begin{itemize}
-	 \item El 23\% de los productos son negro.
-	\item El 20\% de los productos son dorados.
-	\item El 11\% de los productos son gris espacial.
-	\end{itemize}	  
-	Luego analizamos el almacenamiento de los productos y concluímos que:
+	 Sobre las características de esos modelos primero analizamos el color de los productos vistos y concluímos que: el 50\% de las visitas se concentraron en los siguientes colores:
+	 Las visitas según el color de los celulares fue:
 	\begin{itemize}
-	\item El 33\% visita productos con almacenamiento de 16 GB.
-    \item El 32\% visita productos con almacenamiento de 32 GB.
-    \item El 17\% visita productos con almacenamiento de 64 GB.
-    \item El 6\% visita productos con almacenamiento de 8 GB.
-	\end{itemize}
-	Por último analizamos las condiciones d elos productos vistos y concluímos que:
+	\item el 23\% de las visitas es hacia productos negros.
+	\item el 20\% de las visitas es hacia productos dorados.
+	\item el 11\% de de las visitas es hacia productos gris espacial.
+    \item el 10\% de de las visitas es hacia productos blancos.
+     \item el 9\% de de las visitas es hacia productos plateados.
+     \item el 6\% de de las visitas es hacia productos rosas.
+     \item Despreciamos el resto de los colores ya que el porcentaje de visitas es poco significativo. 
+	\end{itemize}	   
+	Luego analizamos las visitas hacia el almacenamiento de los productos y concluímos que:
 	\begin{itemize}
-	\item El 0,02 porciento de los productos que visita el usuario son nuevos.    
-    \item El 2\% de los productos que tienen identificador de huella digital. 
-    \item El 42\% de los productos son de calidad buena.
-    \item El 27\% de los productos son de calidad excelente .
-    \item El 27\% de los productos son de calidad muy buena.
+	\item El 33\% de las visitas es hacia productos con almacenamiento de 16 GB.
+    \item El 32\% de las visitas es hacia productos con almacenamiento de 32 GB.
+    \item El 17\% de las visitas es hacia productos con almacenamiento de 64 GB.
+    \item El 6\% de las visitas es hacia productos con almacenamiento de 8 GB.
 	\end{itemize}
-	Realizamos un análisis temporal sobre el evento y obtuvimos que:
+	Por último analizamos las condiciones que más visita la gente y concluímos que:
+	\begin{itemize}
+    \item El 42\% de las visitas es hacia productos que son de calidad buena.
+    \item El 27\% de las visitas es hacia productos que son de calidad excelente .
+    \item El 27\% de las visitas es hacia productos que son de calidad muy buena.
+        \item El 2\% de las visitas es hacia  productos que tienen identificador de huella digital. 
+        	\item El 0,02\%  de las visitas es hacia  productos nuevos.    
+	\end{itemize}
+	Por otra parte, realizamos un análisis temporal sobre el evento y obtuvimos que:
 	
+	\subsubsection{Análisis temporal}
 	\begin{center}
 	\includegraphics[width=10cm]{VisitasAProductosSegunDiaAnio.jpg}\\
-	\textbf{Figura 4:}  \textit{En este gráfico se puede ver como fueron las visitas según los días del año  }
+	\textbf{Figura 4:}  \textit{Cantidad de visitas según día del año.  }
 	\end{center}
 
 	\begin{center}
 	\includegraphics[width=10cm]{visitasSegunmesDiaMes.jpg}\\
-	\textbf{Figura 5:}  \textit{En este gráfico se pueden ver como fueron las visitas a un producto según mes y el día del mes.   }
+	\textbf{Figura 5:}  \textit{Cantidad de visitas por cada día de cada mes. }\\
+	Podemos notar que hay un fuerte incremento de actvidad a partir del 15 de mayo. 
 	
 	\end{center}
 	\begin{center}
-	\includegraphics[width=10cm]{visitasSegunmesDiaSemana.jpg}\\
-	\textbf{Figura 6:}  \textit{En este gráfico se pueden ver como fueron las visitas según el mes y el día de la semana.    }
+	\includegraphics[width=10cm]{visitasSegunMesYDiaDeSemana.jpg}\\
+	\textbf{Figura 6:}  \textit{Cantidad de visitas por cada día de semana de cada mes.   }
 	\end{center}
+	Nuevamente hay un fuerte incremento a partir del mes de mayo. Sin embargo, no parece haber una predominancia cuando hablamos de los días de la semana. Lo que podemos concluir es que los domingos hay menos actividad. 
 	
-	\textbf{Es importante destacar en el análisis temporal que el mes de  junio no está completo sino su primera quincena. }
+	\textbf{Es importante destacar en el análisis temporal que el mes de  junio no está completo. Sólo tenemos datos de su primera quincena. }
 	
-	Por último relacionamos la información sobre este evento entre sí. Primero entrelazaremos la inforamción entre los cinco modelos más visto y su color. Obtuvimos lo siguiente:
+	\subsubsection{Análisis cruzado}
+	Por último relacionaremos todas las careacterísticas analizadas anteriormente entre sí. Primero entrelazaremos la inforamción entre los cinco modelos más vistos y su color. Obtuvimos lo siguiente:
 
 	\begin{center}
 	\includegraphics[width=10cm]{cincoModMasVisitadosColor.jpg}\\
@@ -181,11 +187,13 @@
 	\end{center}
 	
 	\subsection{Ad campaign Hit}
+	\subsubsection{Análisis individual de las caracterísiticas}
 	Comenzamos analizando este evento fijandonos cuáles son las 10 campañas publicitarias más visitadas. Obtuvimos lo siguiente:
 	\begin{center}
 	\includegraphics[width=10cm] {10campaniasmasPopulares.jpg}\\
 	\textbf{Figura 9:}  \textit{En este gráfico se muestran las 10 campañas publicitarias más visitadas.  }
 	\end{center}
+	\subsubsection{Análisis temporal}
 	Luego, analizamos el top 5 de las campañas publicitarias más clickeadas, es decir, más visitadas según el mes. Obtuvimos lo siguiente: 
 	\begin{center}
 	\includegraphics[width=10cm] {top5campaniasPublicitariasMasImportantesSegunMes.jpg}\\
