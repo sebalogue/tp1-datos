@@ -1,5 +1,11 @@
-\select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n:}{2}{section.1}
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}{section.1}
 \contentsline {section}{\numberline {2}An\IeC {\'a}lisis Preliminar}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Eventos}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Viewed product}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}An\IeC {\'a}lisis individual de las caracter\IeC {\'\i }sticas}{4}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}An\IeC {\'a}lisis temporal}{5}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}An\IeC {\'a}lisis cruzado}{6}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Ad campaign Hit}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}An\IeC {\'a}lisis individual de las caracter\IeC {\'\i }siticas}{7}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}An\IeC {\'a}lisis temporal}{7}{subsubsection.2.3.2}
