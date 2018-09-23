@@ -62,16 +62,16 @@
 	\newpage
 	
 	\section{Introducción:}
-	Este trabajo práctico consitía en realizar un análisis sobre un conjunto de eventos de web analytics de usuarios que visitaron www.trocafone.com, su plataforma de ecommerce de Brasil.
+	Este trabajo práctico consite en realizar un análisis sobre un conjunto de eventos de web analytics de usuarios que visitaron www.trocafone.com, su plataforma de ecommerce de Brasil.
 	
-	Para realizar dicho trabajo utilizamos el lenguaje de programación \textit{Python}. Para el análisis de datos usamos la librería \textit{Pandas} y para la realización de gráficos utilizamos la librerías \textit{Matplotlib }y \textit{Sns}. Por otro lado, trabajamos usando el sistema de control de versiones \textit{GIT}	
+	Para realizar dicho trabajo utilizaremos el lenguaje de programación \textit{Python}. Para el análisis de datos usaremos la librería \textit{Pandas} y para la realización de gráficos utilizaremos las librerías \textit{Matplotlib }y \textit{Sns}. Por otro lado, trabajaremos usando el sistema de control de versiones \textit{GIT}	
 	
-	En nuestra primera experiencia realizando un análisis exploratorio, nos dimos cuenta que una buena abstracción para realizar el trabajo práctico era: \textbf{preguntandole al dataset}. Es decir que en nuestro modelo siempre hacíamos preguntas que luego intentabamos responder con los datos que podíamos obtener del dataset. 
+	En nuestra primera experiencia decimos usar la siguiente abstracción para realizar el trabajo práctico: \textbf{preguntar al dataset}. Es decir, que en nuestro modelo siempre hacemos preguntas que luego intentaremos responder con los datos que obtendremos del dataset. 
 	
 	\section{Análisis Preliminar}
-	En un primer análisis intentamos entender cómo estaba compuesto el data set. Es decir, cuáles son los eventos que los componenen, cómo interactúan como un conjunto y cuáles son las características propias de cada evento. 
+	En un primer análisis intentaremos entender cómo esta compuesto el data set. Es decir, cuáles son los eventos que los componenen, cómo interactúan como un conjunto y cuáles son las características propias de cada evento. 
 	\subsection{Eventos}
-	El dataset contenia los siguiente eventos: 
+	El dataset contiene los siguiente eventos: 
 	\begin{itemize}
 	\item Viewed product: El usuario visita una página de producto.
 	\item Brand listing: El usuario visita un listado específico de una marca viendo un conjunto de productos.
@@ -86,12 +86,14 @@
 	\item Lead: El usuario se registra para recibir una notificación de disponibilidad de stock, para un producto que no se encontraba disponible en ese momento.
 	
 	\newpage
-	La cantidad total de eventos fue: 	1011288. Ellos se distribuyeron de la siguiente manera:
+	La cantidad total de eventos es: 	1011288. Ellos se distribuyeron de la siguiente manera:
 	\end{itemize}
+	
 	\begin{center}
 	\includegraphics[width=10cm]{ocurrencia_eventos.jpg}\\
 	\textbf{Figura 1:}  \textit{En este gráfico se puede ver los eventos y la cantidad de apariciones que tuvieron en el dataset. }
 	\end{center}
+	
 	Nos dimos cuenta que no todos los campos del data set eran relevantes para todos los eventos, por lo tanto, mediante un análisis de elementos nulos llegamos a las siguientes conclusiones: 
 	\begin{itemize}
 		\item Todos los eventos tiene información temporal y sobre la persona que realizó dicho evento. 
@@ -106,18 +108,21 @@
 		\item Para el evento \textbf{static page}  sus campo obligatorio es: satatic page
 		\item Para le evento \textbf{conversion} sus campos obligatorios son:  sku, model, color , condition y storage
 		\item Para el evento \textbf{lead} su campo obligatorio es: model
-
 	\end{itemize}	
 	
-	Como todos los eventos tenían información temporal. Decidimos análizar la cantidad de eventos que se realizan por hora del día y el resultado fue:
+	Como todos los eventos tienen información temporal. Decidimos análizar la cantidad de eventos que se realizan por hora del día y el resultado fue:
+	
 	\begin{center}
 	\includegraphics[width=10cm]{cantidadDeEventosPorHoraDelDia.jpg}\\
 	\textbf{Figura 2:}  \textit{En este gráfico se puede ver los eventos y su distribución a lo largo del día. }
 	\end{center}
-	Por lo tanto, la mayoría de los eventos se efectúan entre las 10 am y 2 am. 
+	Por lo tanto, la mayoría de los eventos se efectúan entre las 10 am y 2 am. \\
+	
+	\textbf{Nos dimos cuenta al analizar el dataset que teníamos información completa del año 2016 entre enero y la primera quincena de junio. }
+	
 	
 	\subsection{Viewed product}
-	La primera columna que decidimos analizar fue model. De ella obtuvimos los 15 celulares más vistos, ellos fueron:
+	La primera columna que decicimos analizar de éste evento es model. De ella obtuvimos los 15 celulares más vistos, ellos son:
 	\begin{center}
 	\includegraphics[width=10cm]{15celularesMasVisitados.jpg}\\
 	\textbf{Figura 3:}  \textit{En este gráfico se pueden ver los 15 celulares más vistos.  }
@@ -161,8 +166,38 @@
 	\textbf{Figura 6:}  \textit{En este gráfico se pueden ver como fueron las visitas según el mes y el día de la semana.    }
 	\end{center}
 	
-
+	\textbf{Es importante destacar en el análisis temporal que el mes de  junio no está completo sino su primera quincena. }
 	
+	Por último relacionamos la información sobre este evento entre sí. Primero entrelazaremos la inforamción entre los cinco modelos más visto y su color. Obtuvimos lo siguiente:
+
+	\begin{center}
+	\includegraphics[width=10cm]{cincoModMasVisitadosColor.jpg}\\
+	\textbf{Figura 7:}  \textit{En este gráfico se muestran los cinco celulares más y cuáles fueron los colores más vistos de cada modelo. }
+	\end{center}
+	Por último, entrelazremos información entre los cinco modelos más visitos y su almacenamiento. Obtuvimos lo siguiente: 
+	\begin{center}
+	\includegraphics[width=10cm] {cincoModMasVisitadosAlmacenamiento.jpg}\\
+	\textbf{Figura 8:}  \textit{En este gráfico se muestran los cinco celulares más y cuáles fueron los colores más vistos de cada modelo. }
+	\end{center}
+	
+	\subsection{Ad campaign Hit}
+	Comenzamos analizando este evento fijandonos cuáles son las 10 campañas publicitarias más visitadas. Obtuvimos lo siguiente:
+	\begin{center}
+	\includegraphics[width=10cm] {10campaniasmasPopulares.jpg}\\
+	\textbf{Figura 9:}  \textit{En este gráfico se muestran las 10 campañas publicitarias más visitadas.  }
+	\end{center}
+	Luego, analizamos el top 5 de las campañas publicitarias más clickeadas, es decir, más visitadas según el mes. Obtuvimos lo siguiente: 
+	\begin{center}
+	\includegraphics[width=10cm] {top5campaniasPublicitariasMasImportantesSegunMes.jpg}\\
+	\textbf{Figura 10:}  \textit{En este gráfico se muestra el top5 de las campañas publicitarias según el mes.  }
+	\end{center}
+	Analizamos así tambien el top5 de publicidades según la cantidad de clicks según el día del año. Obtuvimos lo siguiente:
+
+	\begin{center}
+	\includegraphics[width=10cm] {cantidadDeClicksSegunDiaDelAnio.jpg}\\
+	\textbf{Figura 11:}  \textit{En este gráfico se muestra el top5 de las campañas publicitarias según día del año.  }
+	\end{center}
+
 	
 	
 	

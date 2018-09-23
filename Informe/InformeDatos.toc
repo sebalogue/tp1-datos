@@ -3,3 +3,4 @@
 \contentsline {section}{\numberline {2}An\IeC {\'a}lisis Preliminar}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Eventos}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Viewed product}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Ad campaign Hit}{7}{subsection.2.3}
