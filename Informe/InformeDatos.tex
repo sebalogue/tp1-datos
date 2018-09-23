@@ -1,5 +1,6 @@
 \documentclass[titlepage,a4paper]{article}
 
+\usepackage[utf8]{inputenc} % accented characters in input
 
 \usepackage[spanish,activeacute]{babel}
 %\usepackage[margin = 1in]{geometry}
@@ -62,9 +63,9 @@
 	\newpage
 	
 	\section{Introducción:}
-	Este trabajo práctico consitía en realizar un análisis sobre un conjunto de eventos de web analytics de usuarios que visitaron www.trocafone.com, su plataforma de ecommerce de Brasil.
+	Este trabajo práctico consistió en realizar un análisis sobre un conjunto de eventos de web analytics de usuarios que visitaron www.trocafone.com, su plataforma de ecommerce de Brasil.
 	
-	Para realizar dicho trabajo utilizamos el lenguaje de programación \textit{Python}. Para el análisis de datos usamos la librería \textit{Pandas} y para la realización de gráficos utilizamos la librerías \textit{Matplotlib }y \textit{Sns}. Por otro lado, trabajamos usando el sistema de control de versiones \textit{GIT}	
+	Para realizar dicho trabajo utilizamos el lenguaje de programación \textit{Python}. Para el análisis de datos usamos la librería \textit{Pandas} y para la realización de gráficos utilizamos la librerías \textit{Matplotlib }y \textit{Seaborn}. Por otro lado, trabajamos usando el sistema de control de versiones \textit{GIT}	
 	
 	En nuestra primera experiencia realizando un análisis exploratorio, nos dimos cuenta que una buena abstracción para realizar el trabajo práctico era: \textbf{preguntandole al dataset}. Es decir que en nuestro modelo siempre hacíamos preguntas que luego intentabamos responder con los datos que podíamos obtener del dataset. 
 	
@@ -94,7 +95,8 @@
 	\end{center}
 	Nos dimos cuenta que no todos los campos del data set eran relevantes para todos los eventos, por lo tanto, mediante un análisis de elementos nulos llegamos a las siguientes conclusiones: 
 	\begin{itemize}
-		\item Todos los eventos tiene información temporal y sobre la persona que realizó dicho evento. 
+	
+		\item Todos los eventos tienen información temporal y sobre la persona que realizó dicho evento. 
 		\item Para el evento \textbf{viewed product} sus campos obligatorios son: timestamp , sku , model, condition, storage, color.
 		\item Para el evento \textbf{brand listing} su campo obligatorio es: skus. 
 		\item Para el evento \textbf{visited site} sus campos obligatorios son: channel, new vs returning, city, region, country, device tipe , screen resolution, operating system version y browser version.
@@ -156,8 +158,13 @@
 	\textbf{Figura 5:}  \textit{En este gráfico se pueden ver como fueron las visitas a un producto según mes y el día del mes.   }
 	
 	\end{center}
+
+		A partir de los graficos anteriores se puede ver claramente que hubo un gran crecimiento de visitas a la página (especificamente entradas para ver un producto) a partir del mes de mayo (sobretodo en la segunda quincena) y que se mantuvo, con una leve baja, en las primeras semanas de junio. 
+	Cabe destacar que los datos recolectados son desde enero hasta la primer quincena de junio.
+	
+	
 	\begin{center}
-	\includegraphics[width=10cm]{visitasSegunmesDiaSemana.jpg}\\
+	\includegraphics[width=10cm]{imagenes/visitasSegunMesDiaSemana.png}\\
 	\textbf{Figura 6:}  \textit{En este gráfico se pueden ver como fueron las visitas según el mes y el día de la semana.    }
 	\end{center}
 	
