@@ -16,3 +16,9 @@ https://drive.google.com/file/d/1gUddcLLujjFfwZslypUv1LESTM6KiwJn/view?usp=shari
 El informe se está desarrollando en la plataforma en línea OVERLEAF y puede ser accedido a través del siguiente enlace:
 
 https://v2.overleaf.com/8871852121cvdkgpfhnbbw
+
+## Notebook
+Los notebooks de la version final del TP son:
+
+TP1 - Parte 1,2 .ipynb
+TP1- Parte 3.ipynb
