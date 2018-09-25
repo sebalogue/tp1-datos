@@ -17,6 +17,11 @@ El informe se está desarrollando en la plataforma en línea OVERLEAF y puede se
 
 https://v2.overleaf.com/8871852121cvdkgpfhnbbw
 
+El pdf con la version final del TP es:
+
+informe_tp1.pdf
+
+
 ## Notebook
 Los notebooks de la version final del TP son:
 
