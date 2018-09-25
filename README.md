@@ -21,4 +21,5 @@ https://v2.overleaf.com/8871852121cvdkgpfhnbbw
 Los notebooks de la version final del TP son:
 
 TP1 - Parte 1,2 .ipynb
+
 TP1- Parte 3.ipynb
